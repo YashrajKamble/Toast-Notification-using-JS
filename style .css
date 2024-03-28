@@ -34,6 +34,7 @@ body {
   overflow: hidden;
   padding: 20px;
 }
+
 .toast {
   width: 400px;
   height: 80px;
@@ -43,6 +44,18 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
+  position: relative;
+  transform: rotateX(100%);
+  animation: moveleft 0.5s linear forwards;
+}
+
+@keyframes moveleft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .toast i {
@@ -57,4 +70,29 @@ body {
 
 .toast.invalid i {
   color: orange;
+}
+
+.toast::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80%;
+  height: 5px;
+  background: green;
+  animation: anim 3s linear forwards;
+}
+
+@keyframes anim {
+  100% {
+    width: 0;
+  }
+}
+
+.toast.toast.error::after {
+  background: red;
+}
+
+.toast.toast.invalid::after {
+  background: orange;
 }

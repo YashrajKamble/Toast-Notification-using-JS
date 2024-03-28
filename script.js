@@ -1,4 +1,5 @@
 let toastBox = document.getElementById('toastBox');
+
 let successMsg = '<i class="fa-solid fa-circle-check"> </i> Successfully Submitted';
 let errorMsg = '<i class="fa-solid fa-circle-xmark"> </i> Please Fix the Error !';
 let invalidMsg = '<i class="fa-solid fa-circle-exclamation"> </i> Invalid Input, Check Again';
@@ -16,4 +17,8 @@ function showToast(msg) {
     if (msg.includes('Invalid')) {
         toast.classList.add('invalid');
     }
+
+    setTimeout(() => {
+        toast.remove();
+    }, 3000);
 }
