@@ -1,4 +1,7 @@
 @media only screen and (min-width: 400px) and (max-width: 450px) {
+    .cr{
+        padding-left: 73%;
+    }
   body {
     border: 1px solid black;
     margin: 15px;

@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+.cr {
+  padding-left: 92%;
+}
 
 body {
   background: #f7edff;
